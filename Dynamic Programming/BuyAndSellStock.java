@@ -1,3 +1,4 @@
+
 /**
  * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/ 
  * Say you have an array for which the ith element is the price of a given stock on day i. 
@@ -33,17 +34,23 @@ public class BuyAndSellStock {
      * 
      * Find largest peak following smallest valley.
      * Maintain two variables - minprice and maxprofit corresponding to valley and peak
+     * 
+     * Time Complexity: O(n). Single pass
+     * Space Complexity: O(1). Two variables
      */
     public int maxProfitOnePass(int prices[]){
         int minPrice = Integer.MAX_VALUE;   // Largest value stored in Integer
         int maxProfit = 0;
+        // Init: maxProfit = 0; minPrice = Integer.MAX; i < prices.length
         for (int i = 0; i < prices.length; i++){
+            // Maintenance: minPrice = smallest so far; maxProfit = max(sell - buy) so far
             if (prices[i] < minPrice){
                 minPrice = prices[i];
             } else if (prices[i] - minPrice > maxProfit){
                 maxProfit = prices[i] - minPrice;
             }
         }
+        // Termination: maxProfit = max(sell - buy)
         return maxProfit;
     }
 }
