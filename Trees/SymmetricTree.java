@@ -13,7 +13,7 @@ public class SymmetricTree{
      * Space Complexity: O(n) because worst case, tree is linear and height is O(n).
      */
     public boolean isSymmetricRecursive(TreeNode root){
-        if (!root) return true;
+        
         return isMirror(root, root);
     }
     public boolean isMirror(TreeNode t1, TreeNode t2){
