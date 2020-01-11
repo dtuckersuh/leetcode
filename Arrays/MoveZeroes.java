@@ -6,6 +6,8 @@
 public class MoveZeroes{
     /**
      * Use two pointers, one to iterate through array and another to track non-zero index
+     * Time Complexity: O(n) because we iterate through whole array.
+     * Space Complexity: O(1) constant space is used
      */
     public void moveZeroes(int[] nums){
         int index = 0;
