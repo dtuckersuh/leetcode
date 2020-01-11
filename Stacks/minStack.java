@@ -1,5 +1,6 @@
 /**
  * https://leetcode.com/problems/min-stack/
+ * Creates stack data structure 
  */
 class MinStack {
     private Node head;
