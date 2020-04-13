@@ -1,0 +1,17 @@
+PriorityQueue Implementation
+
+    - Every step of algorithm, we need to know top heaviest stone
+    - Most efficient way to retrieve max for large input sizes is to use max heap, or PriorityQueue (min heap) for java w/ reverse comparator
+    - O(nlog(n)) time O(n) space
+
+BucketSort Implementation
+
+    - Constant access and no typical "sorting"
+    - O(n + maxStoneWeight) time because we will build bucket for every possible maxStoneWeight
+    - Solution worse than O(n) since n is at most 30! O(3) == O(1030) but 30 < 1030
+
+Sort in place in array
+
+    - Dont waste time building new objects or copies of input
+    - O(n^2 log(n)) time because for every stone n, we sort array O(nlog(n))
+    - o(1) space 
