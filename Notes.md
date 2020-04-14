@@ -46,7 +46,7 @@
     - Style points 
     - Code clarity over one-liners
 
-Extra Tips
+- Extra Tips
     - Try solving similar problems to build flexibility and comfort
         - Wrote a min heap, try writing max heap
         - know quicksort, try mergesort
