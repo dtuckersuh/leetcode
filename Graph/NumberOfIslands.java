@@ -1,7 +1,16 @@
-
+/**
+ * Given a 2d grid map of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed
+ * by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water
+ */
 public class NumberOfIslands {
-    public int numIslands(char[][] grid){
-        if (grid == nulll || grid.length == 0){
+    /**
+     * Iterate through each cell of the grid and if is an island ('1'), do dfs to mark all adjacent islands, then increase
+     * counter by 1.
+     * @param grid
+     * @return number of islands
+     */
+    public int numIslands(char[][] grid) {
+        if (grid == null || grid.length == 0){
             return 0;
         }
         int numIslands = 0;
@@ -14,6 +23,7 @@ public class NumberOfIslands {
     }
 
     public int dfs(char[][] grid, int i, int j){
+        // Bound checking or not an island
         if (i < 0 || i >= grid.length || j < 0 || j >= grid[i].length || grid[i][j] == '0'){
             return 0;
         }
